@@ -13,6 +13,16 @@ The requirements are as follows:
 4) It included Singleton design Pattern, MVP, Retrofit SDK, latest dependencies. All succesful test cases.
 5) It also contain **Coverage Reports**. Check it in app > reports > androidTests > connected > index.html
 
+## Dependencies used in this project
+
+Following Dependencies, libraries and SDK are used in this project:
+
+1)	**Retrofit** (com.squareup.retrofit2:retrofit:2.3.0) - For Rest API operations.
+2) **Sweet Alert Dialog** (cn.ziyeyouhu.android:sweet-alert-dialog:1.0) - For Material Design Popups, Dialogs, Progressbars.
+3) **Butterknife** (com.jakewharton:butterknife:8.8.1) - For Data binding
+4) **Espresso** (com.android.support.test.espresso:espresso-core:3.0.2) - For Espresso tests
+5) **Unit Testing** (junit:junit:4.12) - For Unit tests.
+6) **Android Support** (com.android.support:design:28.0.0)
 
 ## Configuration and code snippets
 
