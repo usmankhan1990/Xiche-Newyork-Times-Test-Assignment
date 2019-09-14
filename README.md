@@ -252,8 +252,4 @@ public class NewsActivityTest {
 }
 ```
 
-## Screenshots
-
-**Popular posts screen**
-
 
