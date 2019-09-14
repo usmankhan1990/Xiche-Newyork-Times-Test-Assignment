@@ -252,4 +252,6 @@ public class NewsActivityTest {
 }
 ```
 
+**Coverage Reports**
 
+You can Check Coverage Rerports in app > reports > androidTests > connected > index.html
