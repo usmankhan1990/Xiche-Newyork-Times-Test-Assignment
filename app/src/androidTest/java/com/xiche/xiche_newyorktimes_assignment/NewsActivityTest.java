@@ -88,8 +88,6 @@ public class NewsActivityTest {
 
     @After
     public void tearDown(){
-//        Thread.sleep(1000);
-//        mainActivity.finish();
         activityTestRule.finishActivity();
     }
 }
