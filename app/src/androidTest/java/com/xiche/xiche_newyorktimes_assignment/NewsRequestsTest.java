@@ -51,7 +51,6 @@ public class NewsRequestsTest {
 
     @After
     public void tearDown() {
-//        rfInterface = null;
+        rfInterface = null;
     }
-
 }
