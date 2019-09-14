@@ -85,3 +85,42 @@ In **RetrofitClient** class, This class use to connect with Retrofit client.
         return retrofit;
     }
 ```
+
+**Design Patterns:** 
+
+Singleton Design patterns: 
+
+```Java
+
+public class HelperMethods {
+
+    private static HelperMethods ourInstance = null;
+
+    public static HelperMethods getInstance() {
+        if (ourInstance == null) {
+            ourInstance = new HelperMethods();
+            return ourInstance;
+        }
+        return ourInstance;
+    }
+
+}
+
+private HelperMethods helperMethods = HelperMethods.getInstance();
+
+```
+
+MVP: 
+
+For classes are used in this Architecture:
+
+```Java
+
+NewsActivity
+NewsPresenter
+NewsPresenterImpl
+NewsView
+
+```
+
+
