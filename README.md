@@ -61,3 +61,27 @@ In **RestServicesCalls** class, I am using it to connected with Rest Api which i
     }
 ```
 
+In **RetrofitClient** class, This class use to connect with Retrofit client.
+
+```Java
+    /**
+     * <p>This method makes retrofit client to connect and API</p>
+     *  @param BASE_URL1   - Server api base URL
+     *  It will return a retrofit client
+     */
+    public static Retrofit getClient(String BASE_URL1) {
+        BASE_URL = BASE_URL1;
+        OkHttpClient.Builder clientBuilder = new OkHttpClient.Builder();
+        HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
+        loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+        clientBuilder.addInterceptor(loggingInterceptor);
+
+        if (retrofit == null) {
+            Gson gson = new GsonBuilder().setLenient().setDateFormat("yyyy-MM-dd'T'HH:mm:ssZ").create();
+            retrofit = new Retrofit.Builder().client(clientBuilder.build()).baseUrl(BASE_URL)
+                    .addConverterFactory(GsonConverterFactory.create(gson))
+                    .build();
+        }
+        return retrofit;
+    }
+```
