@@ -122,7 +122,7 @@ private HelperMethods helperMethods = HelperMethods.getInstance();
 
 MVP: 
 
-For classes are used in this Architecture:
+News Feed screen is based on MVP Architecture with the following classes:
 
 ```Java
 
