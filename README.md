@@ -1,8 +1,8 @@
 # Xiche Newyork Times Test Assignment
- This is a test assignment for interview purpose which uses Newyork times api's for popular news.
+ This is a test assignment for interview purpose which uses Newyork times api's for popular news / posts.
 
 # Newyork Times Most Popular Feeds
-- This application is to show the most popular Newyork Times post. It is a master / detail app. It shows detail when items on the list are tapped.
+- This application is to show the most popular Newyork Times post. It is a master / detail app. It shows detail when items on the list are tapped. I made a sample account on Newyork times developer portal to register my App there to get the API keys.
 
 ## Requirement for the assignment
 
