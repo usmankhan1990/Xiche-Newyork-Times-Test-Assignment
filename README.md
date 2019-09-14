@@ -135,5 +135,121 @@ NewsView
 
 ## Unit Tests & Instrumental Espresso Tests
 
-**
+**Unit Tests**
+
+```Java
+public class NewsRequestsTest {
+
+    private RetrofitCallsInterface rfInterface = null;
+    Call<ServiceResponseModel> rmDataCall = null;
+    Response<ServiceResponseModel> rmDataResponse = null;
+    private HelperMethods helperMethods = HelperMethods.getInstance();
+    private Constants constants = Constants.getInstance();
+
+    @Before
+    public void setUp() throws Exception {
+
+        rfInterface = helperMethods.getRetrofitInterface(constants.service);
+        rmDataCall = rfInterface.getDetails(constants.apikey);
+        rmDataResponse = rmDataCall.execute();
+
+    }
+
+    @Test
+    public void success200_ResponseCode() throws IOException {
+
+        assertEquals(200, rmDataResponse.code());
+        assertEquals(true, rmDataResponse.isSuccessful());
+    }
+
+    @Test
+    public void successOK_ResponseCode() throws IOException {
+
+        assertEquals("OK", rmDataResponse.message());
+    }
+
+    @Test
+    public void getArticleSourceText() throws IOException {
+
+        Assert.assertEquals( "The New York Times", rmDataResponse.body().getResults().get(0).getSource() );
+    }
+
+    @After
+    public void tearDown() {
+        rfInterface = null;
+    }
+}
+```
+**Instrumental Tests**
+
+```Java
+
+@RunWith(AndroidJUnit4.class)
+public class NewsActivityTest {
+
+    private RetrofitCallsInterface rfInterface = null;
+    private NewsPresenter newsPresenter;
+    private Response<ServiceResponseModel> rmDataResponse = null;
+    private HelperMethods helperMethods = HelperMethods.getInstance();
+    private NewsActivity mainActivity = null;
+    private Constants constants = Constants.getInstance();
+
+    @Rule
+    public ActivityTestRule<NewsActivity> activityTestRule = new ActivityTestRule<>(NewsActivity.class);
+
+    @Before
+    public void setUp() throws Exception {
+
+        mainActivity = activityTestRule.getActivity();
+        rfInterface = helperMethods.getRetrofitInterface(constants.service);
+
+        Call<ServiceResponseModel> rmDataCall = rfInterface.getDetails(constants.apikey);
+        rmDataResponse = rmDataCall.execute();
+
+        if(rmDataResponse.body().getResults()!=null){
+            newsPresenter= new NewsPresenter(mainActivity, rmDataResponse.body().getResults());
+        }
+    }
+
+    @Test
+    public void testNewsFeed_DrawerLayout() {
+        View view = mainActivity.findViewById(R.id.drawer_layout);
+        assertNotNull(view);
+    }
+
+    @Test
+    public void testNewsFeed_RecyclerView() {
+        View view = mainActivity.findViewById(R.id.rclView_news);
+        assertNotNull(view);
+    }
+
+    @Test
+    public void displayedTextLinkInDetailView() {
+        onView(ViewMatchers.withId(R.id.rclView_news))
+                .perform(RecyclerViewActions.actionOnItemAtPosition(0, click()));
+
+        onView(withText("For more detail, click on the following link :")).check(matches(isDisplayed()));
+    }
+
+    @Test
+    public void displayedAbstractTextView() {
+        onView(ViewMatchers.withId(R.id.rclView_news))
+                .perform(RecyclerViewActions.actionOnItemAtPosition(0, click()));
+        onView(ViewMatchers.withId(R.id.txtDescription)).check(matches(isDisplayed()));
+    }
+
+    @Test
+    public void clickUrlTextLink() {
+        onView(ViewMatchers.withId(R.id.rclView_news))
+                .perform(RecyclerViewActions.actionOnItemAtPosition(0, click()));
+        onView(ViewMatchers.withId(R.id.txtUrl)).perform(click());
+    }
+
+    @After
+    public void tearDown(){
+        activityTestRule.finishActivity();
+    }
+}
+```
+
 
