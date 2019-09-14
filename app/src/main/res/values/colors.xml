@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="red_theme">#C62828</color>
+    <color name="red_theme_new">#C62828</color>
+    <color name="white">#ffffff</color>
+    <color name="white_intro">#FFFFFF</color>
+    <color name="gray">#716E74</color>
+    <color name="green">#06D22F</color>
+    <color name="black">#000</color>
+    <color name="blue">#002AFF</color>
+    <color name="material_blue_grey_90">#ff263238</color>
+    <color name="blue_header">#3F51B5</color>
+    <color name="status">#303F9F</color>
+    <color name="dark_green">#46523C</color>
+    <color name="light_gray">#ececec</color>
+    <color name="blue_dark">#2d499d</color>
+    <color name="blue_light">#1e90ff</color>
+    <color name="light_blue">#2592F8</color>
+    <color name="red">#b20000</color>
+    <color name="verylightgray">#ededed</color>
+    <color name="light_orange">#FFC828</color>
+    <color name="gray_blue">#183a46</color>
+    <color name="new_gray">#6e6e6e</color>
+    <color name="new_blue">#76b6db</color>
+    <color name="new_sea_green">#7ad6b0</color>
+    <color name="new_dark_blue">#4d77b3</color>
+    <color name="new_green">#00994C</color>
+    <color name="purple">#551A8B</color>
+    <color name="screen_chat_background">#7fc2f5</color>
+    <color name="gray_holo_light">#d0d0d0</color>
+    <item name="gray_holo_dark" type="color">#ff464646</item>
+</resources>

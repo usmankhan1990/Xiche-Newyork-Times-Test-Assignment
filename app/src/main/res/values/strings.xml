@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Xisché Test</string>
+
+    <string-array name="spinner_sort_items">
+        <item>Oldest</item>
+        <item>Newest</item>
+    </string-array>
+</resources>

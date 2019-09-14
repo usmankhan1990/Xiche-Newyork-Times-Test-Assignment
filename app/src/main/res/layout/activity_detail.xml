@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/material_blue_grey_90"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20"
+        android:layout_marginLeft="@dimen/margin_7"
+        android:layout_marginRight="@dimen/margin_7"
+        android:fontFamily="@font/lato_light"
+        android:gravity="left"
+        android:text="1234"
+        android:textColor="@color/light_gray" />
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_7"
+        android:fontFamily="@font/lato_light"
+        android:gravity="left"
+        android:text="1234"
+        android:textColor="@color/light_gray"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="Description text"
+        android:fontFamily="@font/lato_light"
+        android:textColor="@color/light_gray"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txtSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="left"
+        android:text="Section"
+        android:textColor="@color/light_gray" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="@color/light_gray"
+        android:layout_margin="@dimen/margin_20"
+        ></View>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_7"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/margin_50"
+            android:layout_height="@dimen/margin_50"
+            android:background="@drawable/writer" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtAuthor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:gravity="left"
+                android:text="Author"
+                android:fontFamily="@font/lato_semibold"
+                android:textColor="@color/light_gray"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:gravity="left"
+                android:text="Author"
+                android:fontFamily="@font/lato_light"
+                android:textColor="@color/light_gray"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtSource"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_7"
+        android:fontFamily="@font/lato_semibold"
+        android:gravity="left"
+        android:text="Source"
+        android:textColor="@color/light_gray" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_7"
+        android:gravity="left"
+        android:fontFamily="@font/lato_light"
+        android:text="For more detail, click on the following link :"
+        android:textColor="@color/light_gray"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/txtUrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:autoLink="web"
+        android:gravity="left"
+        android:text=""
+        android:fontFamily="@font/lato_light"
+        android:textColor="@color/light_gray"
+        android:textSize="15sp" />
+
+</LinearLayout>
